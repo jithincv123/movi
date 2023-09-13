@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block body %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+<!--    <input type="text" name="name" placeholder="enter movie name">-->
+<!--     <input type="text" name="desc" placeholder="enter movie description">-->
+<!--     <input type="text" name="year" placeholder="enter movie year">-->
+<!--     <input type="file" name="img" >-->
+
+<!--    <input type="submit">-->
+<!--</form>-->
+
+
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+  <br>
+  <div class="w3-container w3-green  w3-border w3-teal">
+    <div class="form-group col-md-6">
+      <label for="moviename">Movie Name</label>
+      <input type="text2" class="form-control" id="moviename" name="name" placeholder="moviename">
+    </div>
+    <div class="form-group col-md-11 ">
+      <label for="desc">Movie Description</label>
+      <input type="text" class="form-control" id="desc"  name="desc" placeholder="desc">
+    </div>
+  <div class="form-group col-md-6">
+    <label for="year">Movie year</label>
+    <input type="text" class="form-control" id="year"  name="year" placeholder="year">
+  </div>
+  <div class="form-group col-md-6">
+    <label for="img">Movie image</label>
+    <input type="file" class="form-control" name="img" id="img" >
+  </div>
+  <button type="submit" class="btn btn-primary">ADD</button>
+  </div>
+
+</form>
+{% endblock %}
